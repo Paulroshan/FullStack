@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 ReactDOM.render(
   <>
-  <h1>bat man</h1>
+  <h1>hello man</h1>
   </>
   ,document.getElementById('root')
 );
