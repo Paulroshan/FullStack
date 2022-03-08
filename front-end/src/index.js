@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Design } from './App';
-import { Sasi } from './Design';
-import { MD } from './First';
+import { Recruite } from './NewResource';
+
 
 ReactDOM.render(
   <>
-  <h1>hello man</h1>
-  <Design/>
-  <MD/>
-  <Sasi/>
+  <Recruite/>
+
   </>
   ,document.getElementById('root')
 );
