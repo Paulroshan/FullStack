@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Recruite } from './NewResource';
+import { Hai } from './Home';
 
 
 ReactDOM.render(
   <>
-  <Recruite/>
+  <Hai/>
 
   </>
   ,document.getElementById('root')

@@ -1,12 +1,39 @@
-import React from "react";
+ import React, { useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-export const Recruite=()=>{
-          const roshan=()=>{
-              alert("Hired")
-          }
-          const dhana=()=>{
-              alert("rejected")
-          }
+export const Rectue=()=>{
+
+    const[person, setPerson]=useState({
+        "resName":"",
+        "resPay":0,
+        "resArea":"",
+        "resSkills":new Array()
+
+    })
+    const traks=(s)=>{
+        const{value}=s.target
+        person.resSkills.push(value)
+
+    }
+
+    const track=(paul)=>{
+        const{name,value}=paul.target
+        setPerson(
+            (dhand)=>{
+            return{
+                ...dhand,
+                [name]:value
+                
+            }
+        }
+
+        )
+
+    }
+
+    const roshan=()=>{
+        alert(JSON.stringify(person))
+    }
+
     return(
         <>
         <div className="container-fluid mt-5">
@@ -16,7 +43,9 @@ export const Recruite=()=>{
         <div className="form group">
         <label> Resource Name</label>
         <input type="text"
-         name="res Name"
+         name="resName"
+         onChange={track}
+         value={person.resName}
          placeholder="name of the resource person"
          className="from-control" 
         />
@@ -26,14 +55,16 @@ export const Recruite=()=>{
             <label>Resource Commercial</label>
             <input
                 type="number"
-                name="respay"
+                name="resPay"
+                onChange={track}
+                value={person.resPay}
                 placeholder="commercial per day of the resource person"
                 className="form-control"
                 />
                 </div>
     <div className="col-md-6 col-sm-12">
             <label>Resource Location</label>
-            <select name="resArea" className="form-select">
+            <select name="resArea" className="form-select" onChange={track} value={person.resArea}>
                 <option> Select Location</option>
                 <option>Chennai</option>
                 <option>Salem</option>
@@ -47,22 +78,25 @@ export const Recruite=()=>{
               <input 
                     type ="checkbox"
                     name="java"
+                    onChange={traks}
                     value="Java"
                     className="form-check-input"/>Java
               <input 
                     type="checkbox"
                     name="python"
+                    onChange={traks}
                     value="Python"
                     classname="form-check-input ms-sm-5 ms-md-5 ms-lg-5"/>Python
                <input
                      type="checkbox"
+                     onChange={traks}
                      name="javascript"
                      value="Javascript"
                      classname="form-check-input ms-sm-5 ms-md-5 ms-lg-5"/>Javascript
                      </div>
                      <div className="mt-4 row justify-content-around">
-                         <button onclick={roshan} className="col-2 btn btn-outline-success">Hire</button>
-                         <button onclick={dhana} className="col-2 btn btn-outline-success">cancel</button>
+                         <button onClick={roshan} className="col-2 btn btn-outline-success">Hire</button>
+                         <button className="col-2 btn btn-outline-success">cancel</button>
                    </div>
                          </div>
                      </div>
