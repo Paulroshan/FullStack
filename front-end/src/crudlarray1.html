@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
+    <script src="./Crudltask1.js"></script>
 </head>
 <body>
     <div class="container bg-dark">
@@ -18,10 +18,10 @@
         <div class="col-lg-8 col-md-10 col-sm-12 p-3  text-light">
             <input type="text" id="content" placeholder="Enter the name" class="form-control"/>
             <div class="row justify-content-around  mt-4 " >
-                <button class="btn btn-outline-dark col me-3" onclick="design()">create</button>
-                <button class="btn btn-outline-warning col me-3" onclick="erase()">delete</button>
-                <button class="btn btn-outline-light col me-3"onclick="update()">update</button>
-                <button class="btn btn-outline-primary col me-3" onclicl="read()">Read</button>
+                <button class="btn btn-outline-dark col me-3" onclick="cr()">create</button>
+                <button class="btn btn-outline-warning col me-3" onclick="del()">delete</button>
+                <button class="btn btn-outline-light col me-3"onclick="upd()">update</button>
+                <button class="btn btn-outline-primary col me-3" onclick="re()">Read</button>
                 <button class="btn btn-outline-info col me-3" onclick="list()">list</button>
             
                 
@@ -30,8 +30,9 @@
             </div>
 
         </div>
-    <p id="results"></p>
+    <p id="results" class="text-light text-center"></p>
     </div>
     </div>
+    
 </body>
 </html>

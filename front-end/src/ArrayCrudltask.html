@@ -14,22 +14,23 @@
     
 </head>
 <body>
-    <div class="row justify-content-center bg-success">
-    <h3 Class="col-4 fw-bold text-center" >ARRAY CRUDL IN JAVASCRIPT</h3> 
-    <div class=" col-9  bg-warning text-center "><br>
-    <label>TYPE:</label>
-    <input class="col-6" types= "text" id="data"/>
-    <div class="py-2"></div><br>
-    <button class="btn btn-success col-2" onclick="lists()">Show</button>
-    <button class="btn btn-info col-2" onclick="edit()">Update</button>
-    <button class="btn btn-danger col-2" onclick ="erase()">Delete</button>
-    <button class="btn btn-dark col-2" onclick="insert()">Create</button>
-         <p id="result"></p>
+    <div class="container bg-secondary ">
+    <div class="row justify-content-center bg-dark">
+    <h3 Class="col-4 fw-bold text-center text-white py-3" >ARRAY CRUDL IN JAVASCRIPT</h3> 
+    <div class=" col-6  bg-dark text-center text-white "><br>
+    <label class="text-info">Type:</label>
+    <input class="col-6 " types= "text" id="data"/>
+    <div class="py-2 "></div><br>
+    <button class="btn btn-outline-primary col-2" onclick="lists()">Show</button>
+    <button class="btn btn-outline-info col-2" onclick="update()">Update</button>
+    <button class="btn btn-outline-danger col-2" onclick ="erase()">Delete</button>
+    <button class="btn btn-outline-light col-2" onclick="design()">Create</button>
          </div>
     </div>
+    <p id="result"></p>
+
+</div>
     </div>
-    <div >
-   <table class="table" id="tap"></table>
-    </div>
+</div>
 </body>
 </html>

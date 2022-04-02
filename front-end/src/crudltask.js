@@ -4,23 +4,24 @@ const lists=()=>{
     let collect="";
     collect+="<table><thread><tr><th>elements</th></tr></thead><tbody>"
     final.map((elem)=>{
-        collect+="<tr><td>"+ elem +"</tr></td>"
+        collect+="<tr><td>"+ elem+"</tr></td>"
     })
     collect+="</tbody></table>";
-    document.getElementById("tap").innerHTML=collect;
+    document.getElementById("result").innerHTML=collect;
+    
 
 }
 
-const update=()=>{
-    let ed=document.getElementById("data").value;
-    const yet=prompt("enter the value :"+ final[ed], "")
-    final[ed]=yet
-    lists();
-}
+ const update=()=>{
+     const pos=document.getElementById("data").value;
+     const yet=prompt("enter the new value for:"+final[pos],"");
+     final[pos]=yet;
+     lists();
+ }
+        
 
 
-
-const create =()=>{
+const design =()=>{
     let cr=document.getElementById("data").value;
     final.push(cr)
     alert("array created successfully")
